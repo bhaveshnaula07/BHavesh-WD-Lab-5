@@ -109,11 +109,8 @@ If enabled, the link will be available in your repo settings.
 
 ---
 
-## 🎥 Video Explanation
 
-Link: *(add your Drive/YouTube link here)*
 
----
 
 ## ✨ Conclusion
 
