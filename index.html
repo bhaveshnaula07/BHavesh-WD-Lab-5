@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Fashion E-Commerce Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <span class="logo">FASHIONISTA</span>
+        <div class="nav-search">
+          <input type="text" placeholder="Search for products..." />
+        </div>
+      </div>
+
+      <div class="hamburger" id="hamburger">☰</div>
+      <div class="nav-right" id="navMenu">
+        <a href="#" class="nav-icon" title="Cart">🛒</a>
+        <a href="#" class="nav-icon" title="Login">👤</a>
+        <a href="#" class="nav-login">Login</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Summer Sale is Here!</h1>
+        <p class="hero-desc">
+          Up to 50% off on selected styles. Refresh your wardrobe with the
+          latest trends.
+        </p>
+        <button class="hero-cta">Shop Now</button>
+      </div>
+    </section>
+
+    <!-- Flash Sale Strip -->
+    <div class="flash-sale">
+      <span>⚡ Flash Sale: Extra 20% OFF! Ends in</span>
+      <div class="countdown" id="countdown">
+        <span id="hours">02</span>: <span id="minutes">15</span>:
+        <span id="seconds">42</span>
+      </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="main-content">
+      <!-- Filters Sidebar -->
+      <aside class="sidebar">
+        <h3>Filters</h3>
+        <div class="filter-group">
+          <strong>Category</strong>
+          <label><input type="checkbox" /> Men</label>
+          <label><input type="checkbox" /> Women</label>
+          <label><input type="checkbox" /> Accessories</label>
+        </div>
+        <div class="filter-group">
+          <strong>Price</strong>
+          <label><input type="checkbox" /> Under $50</label>
+          <label><input type="checkbox" /> $50 - $100</label>
+          <label><input type="checkbox" /> $100+</label>
+        </div>
+        <div class="filter-group">
+          <strong>Color</strong>
+          <label><input type="checkbox" /> Black</label>
+          <label><input type="checkbox" /> White</label>
+          <label><input type="checkbox" /> Blue</label>
+        </div>
+      </aside>
+
+      <!-- Main Section -->
+      <main class="main-section">
+        <!-- Featured Categories -->
+        <section>
+          <div class="categories">
+            <!-- Men -->
+            <div class="category-card">
+              <img
+                src="https://www.azafashions.com/blog/wp-content/uploads/2025/06/Virat-Kohli-wearing-abstract-printed-sweatshirt.jpg"
+                alt="Men"
+              />
+              <div class="category-title">Men</div>
+            </div>
+            <!-- Women -->
+            <div class="category-card">
+              <img
+                src="https://media.vogue.in/wp-content/uploads/2022/06/anushka-sharma-whitetop-bluejeans-1-feat.jpg"
+                alt="Women"
+              />
+              <div class="category-title">Women</div>
+            </div>
+            <!-- Accessories -->
+            <div class="category-card">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Accessories"
+              />
+              <div class="category-title">Accessories</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section>
+          <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+              <img
+                src="https://assets.ajio.com/medias/sys_master/root/20240730/umI0/66a8e3e11d763220fa4cfc43/-473Wx593H-443040993-indigo-MODEL.jpg"
+                alt="Product 1"
+              />
+              <div class="product-title">Classic Denim Jacket</div>
+              <div class="product-price">$79.99</div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+              <img
+                src="https://im.rediff.com/news/2019/jul/22shoe10.jpg?w=450&h=450"
+                alt="Product 2"
+              />
+              <div class="product-title">Men's White Sneakers</div>
+              <div class="product-price">$59.99</div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQflmwg-icPVp9NbV9w8PRssu66fhe2E_75FQ&s"
+                alt="Product 3"
+              />
+              <div class="product-title">Women's Summer Dress</div>
+              <div class="product-price">$49.99</div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt9OYsKpxeXTTZTen7ysUopyKA7THSvRC8GA&s"
+                alt="Product 4"
+              />
+              <div class="product-title">Leather Handbag</div>
+              <div class="product-price">$120.00</div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Best Seller Section -->
+        <section class="best-seller-section">
+          <div class="best-seller-title">Best Sellers</div>
+          <div class="best-seller-grid">
+            <!-- Best Seller 1 -->
+            <div class="product-card">
+              <img
+                src="https://assets.ajio.com/medias/sys_master/root/20240730/umI0/66a8e3e11d763220fa4cfc43/-473Wx593H-443040993-indigo-MODEL.jpg"
+                alt="Best Seller 1"
+              />
+              <div class="product-title">Denim Jacket</div>
+              <div class="product-price">$79.99</div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+            <!-- Best Seller 2 -->
+            <div class="product-card">
+              <img
+                src="https://im.rediff.com/news/2019/jul/22shoe10.jpg?w=450&h=450"
+                alt="Best Seller 2"
+              />
+              <div class="product-title">White Sneakers</div>
+              <div class="product-price">$59.99</div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+            <!-- Best Seller 3 -->
+            <div class="product-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQflmwg-icPVp9NbV9w8PRssu66fhe2E_75FQ&s"
+                alt="Best Seller 3"
+              />
+              <div class="product-title">Summer Dress</div>
+              <div class="product-price">$49.99</div>
+              <button class="product-btn">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+          <div class="testimonials-title">What Our Customers Say</div>
+          <div class="testimonial-list">
+            <div class="testimonial-card">
+              <img
+                class="testimonial-avatar"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6NVWOqTl70S8JM30xcZH0ISyVkgsch260Sw&s"
+                alt="Customer 1"
+              />
+              <div class="testimonial-name">Emily R.</div>
+              <div class="testimonial-text">
+                "Absolutely love the quality and fast shipping! My new favorite
+                store."
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <img
+                class="testimonial-avatar"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqQVxDbBcBpJu8CJUCsvBg1tWBRmW1kkWcmw&s"
+                alt="Customer 2"
+              />
+              <div class="testimonial-name">James K.</div>
+              <div class="testimonial-text">
+                "Great selection and amazing deals. The flash sale was a steal!"
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <img
+                class="testimonial-avatar"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8c6doOuwwjntrd0bDpSPdT1y6NDYsfGdf6w&s"
+                alt="Customer 3"
+              />
+              <div class="testimonial-name">Sophia L.</div>
+              <div class="testimonial-text">
+                "Customer service was super helpful. Will definitely shop
+                again."
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+          <div class="newsletter-title">Stay in the Loop!</div>
+          <div class="newsletter-desc">
+            Sign up for exclusive offers, new arrivals, and more.
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-col">
+        <div class="footer-title">Account</div>
+        <ul class="footer-list">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+          <li><a href="#">Order History</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-title">Help</div>
+        <ul class="footer-list">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-title">Policies</div>
+        <ul class="footer-list">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-title">Follow Us</div>
+        <div class="footer-socials">
+          <a href="#" title="Instagram">📸</a>
+          <a href="#" title="Facebook">📘</a>
+          <a href="#" title="Twitter">🐦</a>
+          <a href="#" title="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Fashionista. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
